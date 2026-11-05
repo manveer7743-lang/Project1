@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <title>Try the Routine | Kaprekar's Routine</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="navigation.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <section class="calculator" aria-labelledby="page-title">
+      <a class="back-link" href="index.html">← How it works</a>
+      <header class="intro">
+        <p class="eyebrow">A little number magic</p>
+        <h1 id="page-title">Kaprekar's routine</h1>
+        <p class="description">
+          Enter any 3 or 4 digit number and watch it converge to its Kaprekar constant.
+        </p>
+      </header>
+
+      <form id="calculator-form" novalidate>
+        <label for="number-input">Your number</label>
+        <div class="input-row">
+          <input
+            id="number-input"
+            name="number"
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            placeholder="e.g. 3524"
+            aria-describedby="error-message"
+          >
+          <button id="calculate-button" class="button button-primary" type="submit" disabled>
+            Calculate
+          </button>
+          <button id="clear-button" class="button button-secondary" type="button">
+            Clear
+          </button>
+        </div>
+        <p id="error-message" class="error-message" role="alert" aria-live="polite"></p>
+      </form>
+
+      <section id="results" class="results" aria-label="Calculation results" aria-live="polite" hidden>
+        <div class="results-heading">
+          <h2>Steps</h2>
+          <p id="iteration-count" class="iteration-count"></p>
+        </div>
+        <ol id="steps-list" class="steps-list"></ol>
+      </section>
+
+      <footer class="footer">
+        <span>3 digits → <strong>495</strong></span>
+        <span class="footer-divider" aria-hidden="true"></span>
+        <span>4 digits → <strong>6174</strong></span>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

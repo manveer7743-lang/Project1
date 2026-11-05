@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Learn how Kaprekar's routine repeatedly rearranges and subtracts digits to reach 495 or 6174.">
+  <title>How It Works | Kaprekar's Routine</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="navigation.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <article class="guide" aria-labelledby="page-title">
+      <header class="guide-header">
+        <p class="eyebrow">A little number magic</p>
+        <h1 id="page-title">A number with a destination.</h1>
+        <p class="guide-lead">
+          Kaprekar's routine is a simple process of sorting digits and subtracting.
+          Repeat it a few times, and your number reaches the same special constant.
+        </p>
+        <a class="button button-primary guide-cta" href="calculator.html">Try the routine <span aria-hidden="true">→</span></a>
+      </header>
+
+      <section class="how-it-works" aria-labelledby="steps-title">
+        <div class="section-heading">
+          <p class="eyebrow">The process</p>
+          <h2 id="steps-title">Three steps. Repeat until it settles.</h2>
+        </div>
+        <ol class="instruction-list">
+          <li class="instruction-card">
+            <span class="step-number">01</span>
+            <div>
+              <h3>Choose a number</h3>
+              <p>Start with any 3- or 4-digit number whose digits aren't all identical.</p>
+            </div>
+          </li>
+          <li class="instruction-card">
+            <span class="step-number">02</span>
+            <div>
+              <h3>Arrange and subtract</h3>
+              <p>Order its digits from largest to smallest, then smallest to largest. Subtract the smaller number from the larger.</p>
+            </div>
+          </li>
+          <li class="instruction-card">
+            <span class="step-number">03</span>
+            <div>
+              <h3>Repeat</h3>
+              <p>Use the answer as your next number. Keep leading zeroes so every number has the same number of digits.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="example-card" aria-labelledby="example-title">
+        <div class="example-copy">
+          <p class="eyebrow">For example · 4 digits</p>
+          <h2 id="example-title">Start with 3524</h2>
+          <p>Sort the digits both ways, subtract, then run the result through the same steps again.</p>
+        </div>
+        <ol class="example-steps">
+          <li><span>5432 − 2345</span><strong>3087</strong></li>
+          <li><span>8730 − 378</span><strong>8352</strong></li>
+          <li><span>8532 − 2358</span><strong>6174</strong></li>
+        </ol>
+      </section>
+
+      <footer class="guide-footer">
+        <p>For 3 digits, the destination is <strong>495</strong>. For 4 digits, it's <strong>6174</strong>.</p>
+        <a href="calculator.html">Ready to try it? Calculate a number <span aria-hidden="true">→</span></a>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
